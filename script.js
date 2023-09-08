@@ -1,12 +1,12 @@
 let input = document.getElementById('inputBox');
 let buttons = document.querySelectorAll('button');
 
-let string = "";
+let string = ""; // string to store values
 let arr = Array.from(buttons);
 arr.forEach(button => {
     button.addEventListener('click', (e) =>{
         if(e.target.innerHTML == '='){
-            string = eval(string);
+            string = eval(string);// js has inbuilt eval function to evaluate.
             input.value = string;
         }
 
@@ -19,7 +19,7 @@ arr.forEach(button => {
             input.value = string;
         }
         else{
-            string += e.target.innerHTML;
+            string += e.target.innerHTML; 
             input.value = string;
         }
         
